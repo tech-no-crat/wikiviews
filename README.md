@@ -1,6 +1,7 @@
 # WikiViews
 
 A small script that produces a CSV containing per-day view counts for any wikipedia article.
+**All data is from [stats.grok.se](http://stats.grok.se/)**, which gets its data from [dumps.wikimedia.org/other/pagecounts-raw/](http://dumps.wikimedia.org/other/pagecounts-raw/).
 
 ## Installation:
 1. Install [Node.js](https://nodejs.org/).
