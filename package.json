@@ -1,0 +1,10 @@
+{
+  "name": "WikiViews",
+  "description": "Produces a CSV with view counts per day for any wikipedia article",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "request": "^2.53.0",
+    "underscore": "*"
+  }
+}
