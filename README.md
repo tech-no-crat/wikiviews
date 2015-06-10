@@ -2,10 +2,12 @@
 
 A node module that will download view counts for a wikipedia article between any two dates.
 
+**All data is from [stats.grok.se](http://stats.grok.se/)**, which gets its data from [dumps.wikimedia.org/other/pagecounts-raw/](http://dumps.wikimedia.org/other/pagecounts-raw/).
+
 Use it like this:
 
 ```
-WikiViews = require('wikiviews');
+var WikiViews = require('wikiviews');
 
 WikiViews('Bitcoin', '201004', '201206', function(data) {
   console.log("Got data");
