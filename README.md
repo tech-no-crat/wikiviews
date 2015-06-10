@@ -1,13 +1,15 @@
 # WikiViews
 
-A small script that produces a CSV containing per-day view counts for any wikipedia article.
-**All data is from [stats.grok.se](http://stats.grok.se/)**, which gets its data from [dumps.wikimedia.org/other/pagecounts-raw/](http://dumps.wikimedia.org/other/pagecounts-raw/).
+A node module that will download view counts for a wikipedia article between any two dates.
 
-## Installation:
-1. Install [Node.js](https://nodejs.org/).
-2. `git clone` this repository.
-3. Inside the project directory run `npm install` to install dependencies.
+Use it like this:
 
-## Running
-1. Edit config.json: you probably want to change the article name and start/end months.
-2. Run `node get-data.js`. Optionally, you can override the article name and filename by passing them as command-line arguments in this order, i.e. `node get-data.js Greece greece-wikipedia-views.csv`. By default, the csv will be saved in `views.csv`.
+```
+WikiViews = require('wikiviews');
+
+WikiViews('Bitcoin', '201004', '201206', function(data) {
+  console.log("Got data");
+});
+```
+
+The second and third arguments are the start and month respectively, so the above code will download data for the wikipedia article on Bitcoin starting from April 2010 to June 2012.
