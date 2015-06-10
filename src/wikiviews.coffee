@@ -1,3 +1,6 @@
+# stats.grok.se will give wikipedia view counts for a single month.
+# The exported function makes multiple requests, one for each month
+# in the given month range and combines the returned data.
 fs = require 'fs'
 request = require 'request'
 
@@ -10,6 +13,7 @@ pad = (num, size) -> ('00000' + num).substr(-size)
 # Generates a string of the format "YYYYMM" for a given year/month
 monthString = (year, month) -> year.toString() + pad(month.toString(), 2)
 
+# The function to be exported:
 run = (article, start, end, resultsCb) ->
   openCalls = 0 # The number of external requests we've made that have not returned yet
   result = {} # Date --> views mapping
