@@ -33,7 +33,7 @@ run = (article, start, end, resultsCb) ->
 
   # Returns the result to the callback
   returnResult = ->
-    resultCb(result)
+    resultsCb(result) if typeof resultsCb == "function"
 
   # Returns the result if openCalls is zero
   # otherwise waits 500ms and tries again
@@ -41,7 +41,7 @@ run = (article, start, end, resultsCb) ->
     if openCalls == 0
       returnResult()
     else
-      setTimeout(writeResultIfReady, 500)
+      setTimeout(returnResultIfReady, 500)
 
 
   # Find the starting/ending month/year

@@ -1,18 +1,20 @@
 {
   "name": "wikiviews",
   "description": "A small library that will fetch view counts per day for a wikipedia article between any dates",
-  "version": "0.0.0",
-  "private": true,
-  "main": "wikiviews.js",
+  "version": "0.0.3",
+  "main": "lib/wikiviews.js",
   "keywords": [
     "wikipedia", "views", "statistics"
   ],
   "scripts": {
-    "prepublish": "coffee -o lib -c src/*.coffee"
+    "prepublish": "coffee -o lib/ -c src/*.coffee"
   },
   "author": "Christos Porios <christos.porios@gmail.com>",
   "dependencies": {
     "request": "^2.53.0",
     "underscore": "*"
+  },
+  "devDependencies": {
+      "coffee-script": "*"
   }
 }
