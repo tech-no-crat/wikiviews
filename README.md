@@ -6,7 +6,7 @@ A node module that will download view counts for a wikipedia article between any
 
 Use it like this:
 
-```
+```js
 var WikiViews = require('wikiviews');
 
 WikiViews('Bitcoin', '201004', '201206', function(data) {
