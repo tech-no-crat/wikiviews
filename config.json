@@ -1,7 +1,0 @@
-{
-  "start": "201001",
-  "end": "201504",
-  "article": "Bitcoin",
-  "baseURL": "http://stats.grok.se/json/en",
-  "filename": "views.csv"
-}
